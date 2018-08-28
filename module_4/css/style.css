@@ -40,8 +40,8 @@ line-height: 32px;
     color: #1abc9c;
 }
 
-.site-navigation li:first-child{
-    background-color:#1abc9c;
+.site-navigation-item:first-child{
+    color:#1abc9c;
   }
 
 .site-navigation{
@@ -102,11 +102,11 @@ h2{
 
 h2::after{
 content:" ";
+margin:0 auto;
 background:#1abc9c;
 height: 7px;
 display:block;
 width: 164px;
-margin-left: 580px;
 margin-top: 12px;
 margin-bottom: 40px;
 }
@@ -161,6 +161,7 @@ img {
     padding-bottom: 7px;
     font-weight: 600;   
   }
+  
   
   .features-list-name{
     width: 195px;
