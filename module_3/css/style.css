@@ -31,7 +31,8 @@ body {
 .wrapper{
     padding-top: 44px;
 	width: 900px;
-	margin:auto;
+    margin:auto;
+    text-align: center;
 }
 
 .site-navigation {
@@ -73,29 +74,73 @@ body {
     display: inline-block;
 
 }
+.activities-list{
+margin:0px;
+padding: 0px;
+font-size: 0px;
+}
+.activities-list-name{
+    font-family: Ubuntu;
+    color:  #b4ad9e;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    margin:0 auto;
+}
+h3{
+font-family: PlayfairDisplay;
+color:  #626262;
+font-size: 30px;
+font-weight: 400;
+text-align: left;
+}
 .activities-list-slogan{
     font-family: Ubuntu;
     color:  #b4ad9e;
     font-size: 14px;
     font-weight: 300;
     text-align: left;
+    margin:0 auto;
 }
 .activities-list-item{
     align-content:center;
-    margin-left: 150px;
-    width:400px;
+    margin-right: 60px;
+    width:420px;
+    margin-bottom: 130px;
     display: inline-block;
 }
+.activities-list-image{
+    margin-bottom: 5px;
+} 
+.activities-list-item:nth-child(2n) {
+    margin-right: 0;
+    }
+.activities-list-item:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+        }
 .activities-list-about{
     width:400px;
+    font-family: PlayfairDisplay;
+    color:  #626262;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin:0;
 }
 
-.footer{ 
-    margin:0 auto;
-    width: 900px;
-    text-align:center
-}
+
 .btn {
     width: 100px;
+    margin:0;
     height: 35px;
+    text-align:center;
+    
 }
+.btn a{
+    text-decoration: none;
+}
+.btn a:hover,
+.btn a:focus{
+	color: hsl(231, 100%, 50%);;
+    }
