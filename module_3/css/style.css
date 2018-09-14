@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @Liepkalo Sign out
+0
+0 0 Liepkalo/goit-fe-course
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+goit-fe-course/module_3/css/style.css
+ca2d116  a day ago
+@Liepkalo Liepkalo 13.09
+     
+154 lines (139 sloc)  2.43 KB
 html{
 	box-sizing:border-box;
     }
@@ -89,7 +106,9 @@ font-size: 0px;
     font-size: 14px;
     font-weight: 300;
     text-align: left;
-    margin:0 auto;
+    margin:0;
+    margin-bottom:40px;
+    
 }
 h3{
 font-family: PlayfairDisplay;
@@ -97,15 +116,10 @@ color:  #626262;
 font-size: 30px;
 font-weight: 400;
 text-align: left;
+margin:0;
+margin-bottom: 40px;
 }
-.activities-list-slogan{
-    font-family: Ubuntu;
-    color:  #b4ad9e;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: left;
-    margin:0 auto;
-}
+
 .activities-list-item{
     align-content:center;
     margin-right: 60px;
@@ -145,7 +159,10 @@ text-align: left;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0 -3px 0 0 hsla(0, 0%, 0%, 0.2) inset;
 }
 
 .btn:hover,
