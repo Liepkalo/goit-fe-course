@@ -1,20 +1,4 @@
-Skip to content
- 
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- @Liepkalo Sign out
-0
-0 0 Liepkalo/goit-fe-course
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-goit-fe-course/module_3/css/style.css
-ca2d116  a day ago
-@Liepkalo Liepkalo 13.09
-     
-154 lines (139 sloc)  2.43 KB
 html{
 	box-sizing:border-box;
     }
@@ -82,6 +66,9 @@ body {
 .site-navigation a:focus{
 	color: hsl(231, 100%, 50%);;
 }
+.page-header{
+    margin-bottom: 115px;
+}
 .main{
     padding-top: 115px;
     width:900px;
@@ -93,7 +80,7 @@ body {
 
 }
 .activities {
-    margin-top:115px;
+    margin:0px;
 }
 .activities-list{
 margin:0px;
