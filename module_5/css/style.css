@@ -32,16 +32,13 @@ body {
   float:left;
   width:200px; 
   text-transform: uppercase;
-  font-family:'Roboto', sans-serif;;
+  font-family:'Roboto:300';
   font-size: 30px;
-  line-height: 32px;
-  text-decoration: none;
-  color:  #515151 
+  line-height: 32px; 
 }
 .logo::first-letter{
   color: #1abc9c;
-  font-family:Roboto;
-  font-weight: 900;
+  font-family:'Roboto:300,700';
 }
 
 .site-navigation-item:first-child{
@@ -92,7 +89,89 @@ h1{
 margin:0 auto;
 text-align: center;
 }
+
+.parent{
+  position:absolute;
+  width: 100%;
+  height: 600px;
+}
+.content {
+  position:relative;
+  top:50%;
+  left:50%;
+  background: #95b932;
+  width:900px;
+  height:100px; 
+  transform: translate(-50%, -50%);
+  margin:0px;
+  padding: 0px;
+}
+.inside {
+  width:200px;
+  margin:0px;
+  font-size: 18px;
+  font-family: OpenSans;
+  color:#fff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 600; 
+  text-align: center;  
+}
+.button1,button2,text inside{
+float:left;
+weight:30px;
+margin:0;
+padding:0;
+}
+.title1{
+  width:800px;
+  display:inline-block;
+  font-family: Roboto;
+  color:  #ffffff;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 54px;
+  text-align: left;
+  margin:0px;
+  padding:0px;
+  text-transform: uppercase;
+}
+.title2{
+  display:inline-block;
+  width:500px;
+  margin:0px;
+  padding:0px;
+  font-family: Roboto;
+  color:  #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 54px;
+  text-align: left;
+  margin:0px;
+  padding:0px;
+  text-transform: uppercase;
+}
+
+
+
+h4{
+  font-family: Roboto;
+  color:  #ffffff;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 h2{
+  font-family: Roboto;
+  color:  #ffffff;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 82px;
+  text-transform: uppercase;
+}
+
+h3{
     margin:0 auto;
     text-align: center;
     padding-top: 50px;
@@ -104,7 +183,7 @@ h2{
     text-transform: uppercase;
     }
 
-h2::after{
+h3::after{
 content:" ";
 margin:0 auto;
 background:#1abc9c;
@@ -122,30 +201,30 @@ img {
   }/*для адекватной работы изображений*/
   
   .container{
-    width: 1140px;
-    margin: 0px;
-    padding:0px;
-    margin-left: 270px;
+    width: 1190px;
+    margin: 0 auto;
+    padding: 15px 0;
   }
   
   .features-list{
     margin: 0;
     padding: 0;
+    margin-right: 50px;
+    display: inline-block;
   }
   
   .features-list-item{
     float: left;
-    margin-right: 30px;
-    margin-bottom:30px;
-    padding:0px;
+    margin:20px;
+    padding:5px;
     width: 255px;
     height: 322px;
     list-style: none;
     position: relative;/*1. указываем, элемент, от которого будет вестись отсчет положения абсолютно позиционированных элементов*/
   }
   
-  .features-list li:nth-child(4n){
-    margin-right: 0px;
+  .features-list li:nth-child(2n){
+    margin-right: 0;
   }
   
   .features-list-descr{
@@ -168,14 +247,14 @@ img {
   
   
   .features-list-name{
-    width: 200.5px;
+    width: 195px;
     background-color: #323232;
     padding-left:14px;
     padding-right:14px;
   }
   
   .features-list-price{
-    width:54.5px;
+    width:50px;
     background-color: #8c8c8c;
     text-align: center;
   }
@@ -192,14 +271,13 @@ img {
     cursor:pointer;
   }
   .lorem {
-      width:347px;
+      width:255px;
       color:  #555252;
       font-family: OpenSans;
       font-weight: 900;
       line-height: 26px;
       text-align: left;
       margin:0px;
-      display: inline;
     } 
    .lorem::after{
         content:" ";
@@ -212,7 +290,7 @@ img {
         margin-bottom: 20px;
       }
     .lorem 2 {
-          width:347px;
+          width:255px;
           margin-bottom: 10px;
           color:  #555252;
           font-family: OpenSans;
@@ -234,21 +312,7 @@ img {
     margin-left: 0px;
 }
 
-.features-list 2{
-  margin: 0px;
-  padding:0px;
-}
+    
 
-.features-list-item 2{
-  float: left;
-  margin-right:0px;
-  margin-bottom:0px;
-  padding:0px;
-  width: 347px;
-  height: 340px;
-  list-style: none;
-}
 
-.features-list 2 li:last-child{
-  margin-right: 0px;
-}
+
