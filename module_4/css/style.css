@@ -192,14 +192,16 @@ img {
     cursor:pointer;
   }
   .lorem {
-      width:347px;
+      width:300px;
       color:  #555252;
-      font-family: OpenSans;
-      font-weight: 900;
-      line-height: 26px;
+      font-family:serif;
+      font-weight:bold;
+      line-height: 18px;
       text-align: left;
+      font-size: 18px;
       margin:0px;
-      display: inline;
+      margin-top:20px;
+      
     } 
    .lorem::after{
         content:" ";
@@ -209,17 +211,20 @@ img {
         width: 136px;
         margin-left: 0px;
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
-    .lorem 2 {
-          width:347px;
+    .lorem2 {
+          width:325px;
           margin-bottom: 10px;
           color:  #555252;
-          font-family: OpenSans;
+          font-family:serif;
           font-weight: 400;
           line-height: 26px;
+          font-size:14px;
           text-align: left;
           margin:0px;
+
+         
            
     } 
  
@@ -232,23 +237,27 @@ img {
     color:#ffffff;
     text-align: center;
     margin-left: 0px;
+    margin-bottom:80px;
 }
 
-.features-list 2{
+.features-list-2{
   margin: 0px;
   padding:0px;
 }
 
-.features-list-item 2{
+.features-list-item-2{
   float: left;
-  margin-right:0px;
-  margin-bottom:0px;
+  margin-right:30.5px;
   padding:0px;
-  width: 347px;
-  height: 340px;
+  width: 350px;
+  height: 261px;
   list-style: none;
 }
 
-.features-list 2 li:last-child{
+.features-list-2 li:last-child{
   margin-right: 0px;
+}
+section1,section2{
+  margin:0px;
+  padding:0px;
 }
