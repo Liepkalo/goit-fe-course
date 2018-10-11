@@ -119,14 +119,18 @@ img {
   color: #fff;
   font-size: 100px;
   cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slider-ctrl-prev {
   left: 0;
+  background-image: url(../img/left.png);
 }
 
 .slider-ctrl-next {
   right: 0;
+  background-image: url(../img/right.png);
 }
 
 .slides-list {
@@ -163,6 +167,7 @@ img {
 .arrow {
   padding: 0px;
   margin: 0px;
+
 }
 
 h1 {
@@ -262,49 +267,10 @@ h2::after {
   cursor: pointer;
 }
 
-.section-main {
+.section {
   background: #e9f0fd;
   background-size: cover;
   padding: 110px 0;
-}
-
-
-.order {
-  border-width: 1px;
-  border-color: #ffffff;
-  border-style: solid;
-  background-color: #323232;
-  width: 164px;
-  height: 48px;
-  opacity: 0;
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  font-family: OpenSans;
-  font-weight: 400;
-  text-align: center;
-  font-size: 14px;
-  line-height: 32px;
-}
-
-.order-image {
-  background-color: transparent;
-  display: inline-block;
-}
-
-.order-image,
-.order-add {
-  float: left;
-  margin: 0;
-  padding-right: 5px;
-  font-size: 18px;
-  font-family: OpenSans;
-  color: #fff;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  font-weight: 600;
 }
 
 .features-list-item:hover .order {
@@ -314,10 +280,6 @@ h2::after {
 .features-list-item:hover .social-icons {
   opacity: 1;
   border-color: #ffffff;
-}
-
-.order:hover {
-  background-color: #1abc9c;
 }
 
 .social-icons li:hover {
@@ -330,12 +292,14 @@ h2::after {
 
 .overlay {
   position: absolute;
-  width: 250px;
-  height: 280px;
-  background-color: #8c8c8c;
   opacity: 0;
   top: 1%;
   left: 1%;
+  width: 100%;
+  height: 282px;
+  border: 10px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.549);
+
 }
 
 .social-icons {
@@ -349,14 +313,24 @@ h2::after {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: OpenSans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: right;
+
 }
 
 .social-icons li {
   float: left;
   margin-right: 4px;
+  margin-bottom: 4px;
+
 }
 
-.social-icons a {
+.social-icons-i {
   display: block;
   height: 50px;
   width: 50px;
@@ -364,11 +338,47 @@ h2::after {
   border-color: #ffffff;
   border-width: 1px;
   border-style: solid;
+
 }
 
 .social-icons li:last-child {
   margin-right: 0;
 }
+
+.heart {
+  background-image: url(../img/heart.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.load {
+  background-image: url(../img/load.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cloack {
+  background-image: url(../img/cloack.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cloack {
+  background-image: url(../img/cloack.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.basket {
+  background-image: url(../img/basket.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 158px;
+  background-color: #323232;
+}
+
+.social-icons-i basket a {}
+
 
 
 footer {
