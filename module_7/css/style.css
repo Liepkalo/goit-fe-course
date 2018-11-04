@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container-box {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0 auto;
+	height: 50px;
+	padding-top: 50px;
+	padding-bottom: 126px;
+	align-items: center;
+}
+
+@font-face {
+	font-family: 'Wisdom Script';
+	src: url('fonts/WisdomScriptAJ.woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.logo {
+	margin: 0;
+	display: inline-block;
+	font-family: 'Wisdom Script', sans-serif;
+	font-size: 26px;
+	color: #fed136;
+	text-decoration: none;
+}
+
+.logo::first-letter {
+	text-transform: uppercase;
+}
+
+.navigation {
+	margin-left: 369px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'Montserrat Regular';
+	src: url('fonts/montserrat-v12-latin-regular.woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.menu-item {
+	display: inline-block;
+	font-size: 14px;
+	font-family: 'Montserrat Regular', sans-serif;
+	font-weight: 600;
+	margin-left: 40px;
+	text-transform: uppercase;
+}
+
+.menu-link {
+	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
+	color: black;
+}
+
+.menu-link:hover {
+	color: #fed136;
+}
+
+.title-wrapper {
+	margin: 0 auto;
+	width: 100%;
+}
+
+@font-face {
+	font-family: 'Montserrat Bold';
+	src: url('fonts/montserrat-v12-latin-800.woff');
+	font-weight: 800;
+	font-style: bold;
+}
+
+.main-title {
+	font-family: 'Montserrat Bold', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	width: 100%;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'Droid Serif';
+	src: url('fonts/DroidSerif-Italic.woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+.second-title {
+	font-size: 16px;
+	font-family: 'Droid Serif', sans-serif;
+	font-weight: 400;
+	color: #777777;
+	text-align: center;
+	margin-bottom: 77px
+}
+
+.service-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding-bottom: 118px;
+	margin-top: 100px;
+}
+
+.service {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	flex-wrap: wrap;
+	position: relative;
+	width: 285px;
+	height: 195px;
+}
+
+.basket {
+	background-image: url(../img/bas.png);
+}
+
+.pc {
+	background-image: url(../img/pc.png);
+}
+
+.close {
+	background-image: url(../img/close.png);
+}
+
+.service-title {
+	font-family: 'Montserrat Bold', sans-serif;
+	position: absolute;
+	top: 90px;
+	width: 100%;
+	font-size: 18px;
+	text-align: center;
+	margin: 0;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('fonts/roboto-slab-v7-latin-regular.woff');
+	font-weight: 400;
+}
+
+.service-text {
+	position: absolute;
+	top: 120px;
+	font-size: 14px;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	color: #777777;
+	text-align: center;
+}
+
+.footer {
+	background-image: url(../img/map.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 675px;
+}
+
+.footer-title {
+	padding-top: 110px;
+}
+
+.form-wrapper {
+	margin: 0 auto;
+	width: 940px;
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+.footer-title-contact-us {
+	color: white;
+	font-family: 'Montserrat Bold', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	width: 100%;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+}
+
+.input {
+	width: 455px;
+	text-indent: 1em;
+	margin-bottom: 28px;
+	border-radius: 4px;
+	font-family: 'Montserrat Bold', sans-serif;
+	color: #bbbbbb;
+	height: 52px;
+}
+
+.input::placeholder {
+	color: #bbbbbb;
+}
+
+.user-data {
+	display: flex;
+	flex-direction: column;
+}
+
+.message {
+	padding-top: 20px;
+	height: 211px;
+	align-self: center;
+}
+
+.button {
+	width: 240px;
+	height: 65px;
+	margin: 0 auto;
+	background-color: #fed136;
+	color: white;
+}
+
+.name {
+	top: 0;
+}
+
+.e-mail {
+	top: 80px;
+}
+
+.subject {
+	top: 160px;
+}
+
+.required:valid {
+	outline: 2px solid green;
+}
+
+.required:invalid {
+	outline: solid 2px red;
+}
