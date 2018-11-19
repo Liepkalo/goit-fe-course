@@ -38,7 +38,8 @@ body {
 }
 
 .page-nav {
-	margin-left: 575px;
+	/*margin-left: 575px;*/
+	display: flex;
 }
 
 .logo {
@@ -48,6 +49,7 @@ body {
 	font-size: 30px;
 	font-weight: 900;
 	color: #95e1d3;
+	text-decoration: none;
 }
 
 .logo::first-letter {
@@ -101,7 +103,7 @@ img {
 	height: auto;
 }
 
-.section1 {
+.services {
 	padding-bottom: 90px;
 }
 
@@ -163,6 +165,7 @@ h3::after {
 	padding: 0;
 }
 
+
 .features-list-item {
 	flex: 0 0 370px;
 	margin-bottom: 72px;
@@ -170,11 +173,65 @@ h3::after {
 	text-align: center;
 }
 
-.features-list-item:nth-last-child(-n + 3) {
+
+.features-list-item .features-list-item:nth-last-child(-n + 3) {
 	margin-bottom: 0;
 }
 
+.article-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+
+.topic {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.article {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	width: 380px;
+	height: 80px;
+	margin-top: 100px;
+}
+
+.article-title {
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	padding-left: 30px;
+}
+
+.article-text {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #999999;
+	text-align: left;
+	padding-left: 30px;
+}
+
+/*
 .icon-alarm {
+	display: flex;
 	background-image: url('../img/ALARM.png');
 	background-repeat: no-repeat;
 	background-position: 0% 0%, 70% 20%;
@@ -208,7 +265,7 @@ h3::after {
 	background-image: url('../img/IMAGE.png');
 	background-repeat: no-repeat;
 	background-position: 0% 0%, 70% 20%;
-}
+}*/
 
 .features-list-item h4 {
 	font-family: 'Montserrat', sans-serif;
@@ -245,7 +302,7 @@ h3::after {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 1200px;
+	/*width: 1200px;*/
 	padding-bottom: 80px;
 	border-bottom: #e5e5e5 solid;
 	margin-bottom: 20px;
@@ -282,20 +339,16 @@ h3::after {
 .team-box {
 	cursor: pointer;
 	margin-right: 29px;
+	width: 380px;
 }
 
 .card {
 	position: relative;
 	margin: 0;
-	width: 380px;
-	height: 470px;
 }
 
 .card-background {
-	content: '';
 	background: #95e1d3;
-	width: 380px;
-	height: 470px;
 }
 
 .card-overlay {
@@ -398,7 +451,7 @@ h3::after {
 	width: 150px;
 	text-transform: uppercase;
 	background-color: #95e1d3;
-	color: white;
+	color: #ffffff;
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -407,8 +460,9 @@ h3::after {
 input {
 	height: 38px;
 	font-style: italic;
-	left: 10px;
-	text-indent: 1em;
+	border-right: 0;
+	/*left: 10px;*/
+	/*text-indent: 1em;*/
 	margin: 0;
 	padding: 0;
 }
