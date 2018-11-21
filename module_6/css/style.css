@@ -38,7 +38,7 @@ body {
 }
 
 .page-nav {
-	/*margin-left: 575px;*/
+
 	display: flex;
 }
 
@@ -61,7 +61,6 @@ body {
 .site-navigation {
 	display: flex;
 	justify-content: space-between;
-	width: 490px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -80,6 +79,7 @@ body {
 	font-size: 14px;
 	font-weight: 400;
 	position: relative;
+	margin-right: 20px;
 }
 
 .site-navigation-item a:hover::after {
@@ -143,7 +143,7 @@ h3 {
 	text-align: center;
 }
 
-h3::after {
+h2::after {
 	content: " ";
 	margin: 0 auto;
 	background: #f38181;
@@ -165,14 +165,12 @@ h3::after {
 	padding: 0;
 }
 
-
 .features-list-item {
 	flex: 0 0 370px;
 	margin-bottom: 72px;
 	padding: 0 60px;
 	text-align: center;
 }
-
 
 .features-list-item .features-list-item:nth-last-child(-n + 3) {
 	margin-bottom: 0;
@@ -187,11 +185,6 @@ h3::after {
 	padding-bottom: 100px;
 }
 
-.topic {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
 
 .article {
 	display: flex;
@@ -229,44 +222,6 @@ h3::after {
 	padding-left: 30px;
 }
 
-/*
-.icon-alarm {
-	display: flex;
-	background-image: url('../img/ALARM.png');
-	background-repeat: no-repeat;
-	background-position: 0% 0%, 70% 20%;
-}
-
-.icon-graph {
-	background-image: url('../img/GRAPH.png');
-	background-repeat: no-repeat;
-	background-position: 0% 0%, 70% 20%;
-}
-
-.icon-PC {
-	background-image: url('../img/PC.png');
-	background-repeat: no-repeat;
-	background-position: 0% 0%, 70% 20%;
-}
-
-.icon-book {
-	background-image: url('../img/BOOK.png');
-	background-repeat: no-repeat;
-	background-position: 0% 0%, 70% 20%;
-}
-
-.icon-home {
-	background-image: url('../img/HOME.png');
-	background-repeat: no-repeat;
-	background-position: 0% 0%, 70% 20%;
-}
-
-.icon-digital {
-	background-image: url('../img/IMAGE.png');
-	background-repeat: no-repeat;
-	background-position: 0% 0%, 70% 20%;
-}*/
-
 .features-list-item h4 {
 	font-family: 'Montserrat', sans-serif;
 	color: #333333;
@@ -302,7 +257,6 @@ h3::after {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	/*width: 1200px;*/
 	padding-bottom: 80px;
 	border-bottom: #e5e5e5 solid;
 	margin-bottom: 20px;
@@ -337,9 +291,13 @@ h3::after {
 }
 
 .team-box {
-	cursor: pointer;
+
 	margin-right: 29px;
 	width: 380px;
+}
+
+.team-box:last-child {
+	margin-right: 0;
 }
 
 .card {
@@ -375,13 +333,11 @@ h3::after {
 }
 
 .social-icons {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 78px;
-	margin: auto;
-	height: 60px;
+	position: relative;
+	left: 68%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
 }
 
 .icon {
@@ -393,6 +349,7 @@ h3::after {
 	border: 0;
 	background-repeat: no-repeat;
 	background-position: 0em;
+	cursor: pointer;
 }
 
 .icon:hover {
@@ -461,8 +418,6 @@ input {
 	height: 38px;
 	font-style: italic;
 	border-right: 0;
-	/*left: 10px;*/
-	/*text-indent: 1em;*/
 	margin: 0;
 	padding: 0;
 }
