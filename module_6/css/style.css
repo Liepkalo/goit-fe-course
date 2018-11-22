@@ -38,7 +38,6 @@ body {
 }
 
 .page-nav {
-
 	display: flex;
 }
 
@@ -185,7 +184,6 @@ h2::after {
 	padding-bottom: 100px;
 }
 
-
 .article {
 	display: flex;
 	flex-direction: row;
@@ -291,7 +289,6 @@ h2::after {
 }
 
 .team-box {
-
 	margin-right: 29px;
 	width: 380px;
 }
@@ -337,7 +334,6 @@ h2::after {
 	left: 68%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-
 }
 
 .icon {
@@ -420,4 +416,5 @@ input {
 	border-right: 0;
 	margin: 0;
 	padding: 0;
+	size: 28px;
 }
