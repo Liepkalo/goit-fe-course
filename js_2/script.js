@@ -1,23 +1,20 @@
 'use strict';
 
-{
+let userInput;
+const numbers = [];
+let total = 0;
+do {
+	userInput = prompt(`Введите число`);
 
-	let userInput;
-	const numbers = [];
-	let total = 0;
-	do {
+	if (isNaN(userInput)) {
+		alert('Было введено не число, попробуйте еще раз');
 		userInput = prompt(`Введите число`);
-		userInput = Number(userInput);
-		if (isNaN(userInput)) {
-			alert('Было введено не число, попробуйте еще раз');
-		} else userInput = Number(userInput);
-		numbers.push(userInput);
-	}
-	while (userInput !== 0);
+	} else userInput = Number(userInput);
+	numbers.push(userInput);
+} while (userInput != false);
 
-	console.log(numbers);
-	for (let i = 0; i < numbers.length; i += 1) {
-		total += numbers[i];
-	}
-	alert('Общая сумма чисел равна  ' + (total));
+console.log(numbers);
+for (let i = 0; i < numbers.length; i += 1) {
+	total += numbers[i];
 }
+alert('Общая сумма чисел равна  ' + total);
