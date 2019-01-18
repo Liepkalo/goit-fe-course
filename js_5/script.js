@@ -50,7 +50,7 @@ const Notepad = function Notepad(notes = []) {
       }
     },
 
-    this.updateNoteContent = function updatedContent(id, updatedContent) {
+    this.updateNoteContent = function updatedNoteContent(id, updatedContent) {
       const note = this.findNoteById(id);
 
       if (!note) return;
@@ -130,6 +130,7 @@ const initialNotes = [{
 /*
  * Посмотрим имя приоритета по id
  */
+
 console.log(Notepad.getPriorityName(PRIORITY_TYPES.LOW)); /* "Low"*/
 console.log(Notepad.getPriorityName(PRIORITY_TYPES.NORMAL)); // "Normal"
 console.log(Notepad.getPriorityName(PRIORITY_TYPES.HIGH)); // "High"*/
@@ -137,6 +138,9 @@ console.log(Notepad.getPriorityName(PRIORITY_TYPES.HIGH)); // "High"*/
 const notepad = new Notepad(initialNotes);
 
 console.log('Все текущие заметки: ', notepad.getNotes());
+
+
+
 
 notepad.saveNote({
   id: 3,
@@ -153,7 +157,6 @@ notepad.saveNote({
 });
 
 console.log('Все текущие заметки: ', notepad.getNotes());
-
 /*
  *  Зима уже близко, пора поднять приоритет на покупку одежды
  */
