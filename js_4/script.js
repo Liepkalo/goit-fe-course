@@ -48,7 +48,6 @@ const notepad = {
         const note = this.findNoteById(id);
 
         if (!note) return;
-        console.log('Updated Content from server: ', updatedContent);
         note[updatedContent.field] = updatedContent.value;
     },
 
