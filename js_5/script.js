@@ -24,6 +24,7 @@ const Notepad = function Notepad(notes = []) {
   };
   this.saveNote = function saveNote(notes) {
     this.notes.push(notes);
+    return this.notes;
   };
 
   this.updateNotePriority = function updateNotePriority(id, priority) {
@@ -32,12 +33,15 @@ const Notepad = function Notepad(notes = []) {
         note.priority = priority;
       }
     }
+    return this.notes;
   };
 
   this.filterNotesByPriority = function filterNotesByPriority(priority) {
+    const filteredByPriorityNotes = [];
     for (const note of this.notes) {
       if (note.priority === priority) {
-        return note;
+        filteredByPriorityNotes.push(note);
+        return filteredByPriorityNotes;
       }
     }
   };
@@ -55,6 +59,7 @@ const Notepad = function Notepad(notes = []) {
 
       if (!note) return;
       note[updatedContent.field] = updatedContent.value;
+      return this.notes;
     },
 
     this.deleteNote = function deleteNote(id) {

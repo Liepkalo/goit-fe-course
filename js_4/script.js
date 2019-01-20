@@ -31,6 +31,7 @@ const notepad = {
 
     saveNote(note) {
         this.notes.push(note);
+        return this.notes;
     },
 
     deleteNote(id) {
@@ -49,6 +50,7 @@ const notepad = {
 
         if (!note) return;
         note[updatedContent.field] = updatedContent.value;
+        return this.notes;
     },
 
     updateNotePriority(id, priority) {
@@ -57,6 +59,7 @@ const notepad = {
         if (!note) return;
 
         note.priority = priority;
+        return this.notes;
     },
 
     filterNotesByQuery(query = '') {
@@ -79,9 +82,11 @@ const notepad = {
     },
 
     filterNotesByPriority(priority) {
+        const filteredByPriorityNotes = [];
         for (const note of this.notes) {
             if (note.priority === priority) {
-                return note;
+                filteredByPriorityNotes.push(note);
+                return filteredByPriorityNotes;
             }
         }
     }
@@ -94,28 +99,28 @@ notepad.saveNote({
     id: 1,
     title: 'JavaScript essentials',
     body: 'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
-    priority: PRIORITY_TYPES.HIGH
+    priority: PRIORITY_TYPES.HIGH,
 });
 
 notepad.saveNote({
     id: 2,
     title: 'Refresh HTML and CSS',
     body: 'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.',
-    priority: PRIORITY_TYPES.NORMAL
+    priority: PRIORITY_TYPES.NORMAL,
 });
 
 notepad.saveNote({
     id: 3,
     title: 'Get comfy with Frontend frameworks',
     body: 'First must get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.',
-    priority: PRIORITY_TYPES.NORMAL
+    priority: PRIORITY_TYPES.NORMAL,
 });
 
 notepad.saveNote({
     id: 4,
     title: 'Winter clothes',
     body: "Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
-    priority: PRIORITY_TYPES.LOW
+    priority: PRIORITY_TYPES.LOW,
 });
 
 console.log('Все текущие заметки: ', notepad.getNotes());
@@ -125,38 +130,51 @@ console.log('Все текущие заметки: ', notepad.getNotes());
  */
 notepad.updateNotePriority(4, PRIORITY_TYPES.NORMAL);
 // Смотрю что у меня в заметках
-console.log('Заметки после обновления приоритета для id 4: ', notepad.getNotes());
+console.log(
+    'Заметки после обновления приоритета для id 4: ',
+    notepad.getNotes(),
+);
 
-/*
- * Решил что фреймворки отложу немного, понижаю приоритет
- */
 notepad.updateNotePriority(3, PRIORITY_TYPES.LOW);
-console.log('Заметки после обновления приоритета для id 3: ', notepad.getNotes());
+console.log(
+    'Заметки после обновления приоритета для id 3: ',
+    notepad.getNotes(),
+);
 
 /*
  * Решил отфильтровать заметки по слову html
  */
-console.log('Отфильтровали заметки по ключевому слову "html": ', notepad.filterNotesByQuery('html'));
+console.log(
+    'Отфильтровали заметки по ключевому слову "html": ',
+    notepad.filterNotesByQuery('html'),
+);
 
 /*
  * Решил отфильтровать заметки по слову javascript
  */
-console.log('Отфильтровали заметки по ключевому слову "javascript": ', notepad.filterNotesByQuery('javascript'));
+console.log(
+    'Отфильтровали заметки по ключевому слову "javascript": ',
+    notepad.filterNotesByQuery('javascript'),
+);
 
 /*
  * Хочу посмотреть только заметки с нормальным приоритетом
  */
-console.log('Отфильтровали заметки по нормальному приоритету: ', notepad.filterNotesByPriority(PRIORITY_TYPES.NORMAL));
+console.log(
+    'Отфильтровали заметки по нормальному приоритету: ',
+    notepad.filterNotesByPriority(PRIORITY_TYPES.NORMAL),
+);
 
 /*
  * Обновим контент заметки с id 3
  */
-
 notepad.updateNoteContent(3, {
-    field: 'title',
-    value: 'Get comfy with React.js or Vue.js'
+    title: 'Get comfy with React.js or Vue.js'
 });
-console.log('Заметки после обновления контента заметки с id 3: ', notepad.getNotes());
+console.log(
+    'Заметки после обновления контента заметки с id 3: ',
+    notepad.getNotes(),
+);
 
 /*
  * Повторил HTML и CSS, удаляю запись c id 2
