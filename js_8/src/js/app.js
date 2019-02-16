@@ -6,6 +6,7 @@ const PRIORITY_TYPES = {
 	HIGH: 2
 };
 
+
 const ICON_TYPES = {
 	EDIT: 'edit',
 	DELETE: 'delete',
@@ -131,7 +132,28 @@ class Notepad {
 
 }
 
+Notepad.PRIORITIES = {
+	0: {
+		id: 0,
+		value: 0,
+		name: 'Low'
+	},
+	1: {
+		id: 1,
+		value: 1,
+		name: 'Normal'
+	},
+	2: {
+		id: 2,
+		value: 2,
+		name: 'High'
+	},
+};
+
 const notepad = new Notepad(initialNotes);
+
+
+console.log('Все текущие заметки: ', notepad.notes);
 
 const createNoteContent = (notes) => {
 
@@ -140,18 +162,18 @@ const createNoteContent = (notes) => {
 
 	const noteTitle = document.createElement('h2');
 	noteTitle.classList.add('note__title');
-	noteTitle.textContent = notepad.notes.title
+	noteTitle.textContent = notes.title //notepad.notes.title
 
 	const noteBody = document.createElement('p');
 	noteBody.classList.add('note__body');
-	noteBody.textContent = notepad.notes.body;
+	noteBody.textContent = notes.body //notepad.notes.body;
 
 	noteContent.append(noteTitle, noteBody);
 
 	return noteContent;
 };
 
-const createActionButton = () => {
+const createActionButton1 = (notes) => {
 
 	const section1 = document.createElement('section');
 	section1.classList.add('note__section');
@@ -177,13 +199,16 @@ const createActionButton = () => {
 
 	const notePriority = document.createElement('span');
 	notePriority.classList.add('note__priority');
-	notePriority.textContent = "prioprity:.....";
+	notePriority.textContent = Notepad.getPriorityName(notes.priority);
 	decreasePrioritybutton.appendChild(iconExpandless);
 	increasePrioritybutton.appendChild(iconExpandmore);
 
 
 	section1.append(decreasePrioritybutton, increasePrioritybutton, notePriority);
 
+	return section1;
+}
+const createActionButton2 = () => {
 	const section2 = document.createElement('section');
 	section2.classList.add('note__section');
 
@@ -209,15 +234,15 @@ const createActionButton = () => {
 
 	section2.append(editNotebutton, deliteNotebutton);
 
-	return section1, section2;
+	return section2;
 
 };
-const createNoteFooter = () => {
+const createNoteFooter = (notes) => {
 
 	const noteFooter = document.createElement('footer');
 	noteFooter.classList.add('note__footer');
 
-	noteFooter.appendChild(createActionButton());
+	noteFooter.append(createActionButton1(notes), createActionButton2());
 
 	return noteFooter;
 };
@@ -234,16 +259,16 @@ const createListItem = (notes) => {
 
 	listItem.appendChild(globalNote);
 
-	globalNote.append(createNoteContent(notes), createNoteFooter());
+	globalNote.append(createNoteContent(notes), createNoteFooter(notes));
 	return listItem;
 
 };
 
 
 const renderListItems = (listRef, notes) => {
-	const listItems = (notepad.notes).map(item => createListItem(notes));
+	const listItems = (notepad.notes).map(item => createListItem(item));
 	listRef.append(...listItems)
 };
 
 const list = document.querySelector('.note-list');
-renderListItems(list, notepad.notes);
+renderListItems(list, notepad);
