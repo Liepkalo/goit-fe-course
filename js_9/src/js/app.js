@@ -21,25 +21,25 @@ const NOTE_ACTIONS = {
 };
 
 const initialNotes = [{
-		id: 1,
+		id: 'id-1',
 		title: 'JavaScript essentials',
 		body: 'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
 		priority: PRIORITY_TYPES.HIGH
 	},
 	{
-		id: 2,
+		id: 'id-2',
 		title: 'Refresh HTML and CSS',
 		body: 'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.',
 		priority: PRIORITY_TYPES.NORMAL
 	},
 	{
-		id: 3,
+		id: 'id-3',
 		title: 'Get comfy with Frontend frameworks',
 		body: 'First should get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.',
 		priority: PRIORITY_TYPES.NORMAL
 	},
 	{
-		id: 4,
+		id: 'id-4',
 		title: 'Winter clothes',
 		body: "Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
 		priority: PRIORITY_TYPES.LOW
@@ -70,6 +70,11 @@ class Notepad {
 		return newItem;
 	}
 
+	delete(id) {
+		this._notes = this._notes.filter(note => note.id !== id);
+	}
+
+
 	filter(query = '') {
 		return this._notes.filter(
 			(note) =>
@@ -78,9 +83,6 @@ class Notepad {
 		);
 	}
 
-	delete(id) {
-		this._notes = this._notes.filter(note => note.id !== id);
-	}
 
 	static getPriorityName(priorityId) {
 		const priorityValues = Object.values(this.PRIORITIES);
@@ -91,7 +93,7 @@ class Notepad {
 		}
 	}
 
-	saveNote(notes) {
+	/*saveNote(notes) {
 		this._notes.push(notes);
 		return this._notes;
 	}
@@ -103,7 +105,7 @@ class Notepad {
 			}
 		}
 		return this._notes;
-	}
+	}*/
 
 	filterNotesByPriority(priority) {
 		const filteredByPriorityNotes = [];
@@ -114,43 +116,44 @@ class Notepad {
 			}
 		}
 	}
-
-	updateNoteContent(id, updatedContent) {
-		for (const note of this._notes) {
-			if (note.id === id) {
-				note[updatedContent.field] = updatedContent.value;
-			}
-			return this._notes;
-		}
-	}
-
-	deleteNote(id) {
-		for (let i = 0; i < this.notes.length; i += 1) {
-			const note = this._notes[i];
-			if (note.id === id) {
-				this.notes.splice(i, 1);
-				return;
-			}
-		}
-	}
-
-	filterNotesByQuery(filter = '') {
-		const filteredNotes = [];
-		for (const note of this._notes) {
-			const {
-				title,
-				body
-			} = note;
-			const noteContent = `${title} ${body}`;
-			const hasFilter = noteContent.toLowerCase().includes(filter.toLowerCase());
-
-			if (hasFilter) {
-				filteredNotes.push(note);
-			}
-		}
-		return filteredNotes;
-	}
 }
+
+/*updateNoteContent(id, updatedContent) {
+	for (const note of this._notes) {
+		if (note.id === id) {
+			note[updatedContent.field] = updatedContent.value;
+		}
+		return this._notes;
+	}
+}*/
+
+/*deleteNote(id) {
+	for (let i = 0; i < this.notes.length; i += 1) {
+		const note = this._notes[i];
+		if (note.id === id) {
+			this.notes.splice(i, 1);
+			return;
+		}
+	}
+}*/
+
+/*filterNotesByQuery(filter = '') {
+	const filteredNotes = [];
+	for (const note of this._notes) {
+		const {
+			title,
+			body
+		} = note;
+		const noteContent = `${title} ${body}`;
+		const hasFilter = noteContent.toLowerCase().includes(filter.toLowerCase());
+
+		if (hasFilter) {
+			filteredNotes.push(note);
+		}
+	}
+	return filteredNotes;
+}*/
+
 
 Notepad.PRIORITIES = {
 	0: {
@@ -172,7 +175,7 @@ Notepad.PRIORITIES = {
 
 const notepad = new Notepad(initialNotes);
 
-console.log('Все текущие заметки: ', notepad.notes);
+
 
 const refs = {
 	list: document.querySelector('.note-list'),
@@ -283,7 +286,7 @@ const createListItem = (notes) => {
 };
 
 const renderListItems = (listRef, notes) => {
-	const listItems = notes.map((note) => createListItem(note));
+	const listItems = notes.map(note => createListItem(note));
 
 	listRef.innerHTML = '';
 	listRef.append(...listItems);
@@ -297,6 +300,7 @@ const addItemToList = (listRef, note) => {
 
 	listRef.appendChild(listItem);
 };
+
 
 // Handlers
 const handleEditorSubmit = (event) => {
@@ -315,15 +319,17 @@ const handleEditorSubmit = (event) => {
 	addItemToList(refs.list, savedItem);
 
 	event.currentTarget.reset();
+
 };
+
+
 
 const handleFilterChange = (event) => {
 	//console.log(event.target.value);
 	const filteredItems = notepad.filter(event.target.value);
-	console.table(filteredItems);
-
 	renderListItems(refs.list, filteredItems);
 };
+
 
 const removeListItem = element => {
 	const parentListItem = element.closest('.note-list__item');
@@ -331,6 +337,8 @@ const removeListItem = element => {
 
 	notepad.delete(id);
 	parentListItem.remove();
+	console.table(notepad._notes);
+
 };
 
 const handleListClick = ({
@@ -345,6 +353,7 @@ const handleListClick = ({
 		case NOTE_ACTIONS.DELETE:
 			console.log('delete');
 			removeListItem(target);
+
 			break;
 
 		default:
