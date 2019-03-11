@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "babel": "^6.23.0"
+    "babel": "^6.23.0",
+    "shortid": "^2.2.14"
   }
 }
