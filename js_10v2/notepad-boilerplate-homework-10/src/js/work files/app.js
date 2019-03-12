@@ -1,10 +1,10 @@
-import initialNotes from './notes.json';
+import initialNotes from '../../assets/notes.json';
 
 import {
     NOTE_ACTIONS,
     ICON_TYPES,
     PRIORITY_TYPES
-} from './constants';
+} from '../utils/constants.js';
 import Notepad from './notepad-model';
 import {
     getRefs,

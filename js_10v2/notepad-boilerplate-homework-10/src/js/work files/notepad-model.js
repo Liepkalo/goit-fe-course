@@ -1,5 +1,9 @@
-import initialNotes from './notes.json';
+import initialNotes from '../../assets/notes.json';
 const shortid = require('shortid');
+import {
+    PRIORITY_TYPES,
+    PRIORITIES
+} from '../utils/constants.js';
 
 
 
@@ -18,7 +22,8 @@ export default class Notepad {
 
             id: shortid.generate(),
             title: text1,
-            body: text2
+            body: text2,
+            priority: PRIORITY_TYPES.LOW,
         };
 
         this._notes.push(newItem);
@@ -61,21 +66,4 @@ export default class Notepad {
         }
     }
 }
-
-Notepad.PRIORITIES = {
-    0: {
-        id: 0,
-        value: 0,
-        name: 'Low'
-    },
-    1: {
-        id: 1,
-        value: 1,
-        name: 'Normal'
-    },
-    2: {
-        id: 2,
-        value: 2,
-        name: 'High'
-    }
-};
+Notepad.PRIORITIES = PRIORITIES;
