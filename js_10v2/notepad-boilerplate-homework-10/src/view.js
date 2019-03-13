@@ -2,7 +2,7 @@ import {
     NOTE_ACTIONS,
     ICON_TYPES,
     PRIORITY_TYPES
-} from '../utils/constants.js';
+} from './js/utils/constants.js';
 
 import Notepad from './notepad-model';
 
