@@ -1,9 +1,9 @@
-import initialNotes from './assets/notes.json';
+import initialNotes from '../../assets/notes.json';
 const shortid = require('shortid');
 import {
     PRIORITY_TYPES,
     PRIORITIES
-} from './js/utils/constants.js';
+} from './constants.js';
 
 
 

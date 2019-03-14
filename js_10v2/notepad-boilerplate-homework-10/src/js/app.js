@@ -1,16 +1,16 @@
-import initialNotes from './assets/notes.json';
+import initialNotes from '../assets/notes.json';
 
 import {
     NOTE_ACTIONS,
     ICON_TYPES,
     PRIORITY_TYPES
-} from './js/utils/constants.js';
-import Notepad from './notepad-model';
+} from './utils/constants.js';
+import Notepad from './utils/notepad-model';
 import {
     getRefs,
     renderListItems,
     addItemToList
-} from './view';
+} from './utils/view';
 
 
 
