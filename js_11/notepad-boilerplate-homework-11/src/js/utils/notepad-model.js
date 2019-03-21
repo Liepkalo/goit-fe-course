@@ -6,7 +6,6 @@ import {
 } from './constants.js';
 
 
-
 export default class Notepad {
 
     constructor(notes = []) {
@@ -65,5 +64,6 @@ export default class Notepad {
             }
         }
     }
+
 }
 Notepad.PRIORITIES = PRIORITIES;
