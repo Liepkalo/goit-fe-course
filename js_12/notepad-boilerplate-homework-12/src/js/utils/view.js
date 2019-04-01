@@ -28,7 +28,7 @@ export const renderListItems = (listRef, notes) => {
         const priorityName = Notepad.getPriorityName(note.priority);
         return createListItem({
             ...note,
-            priority: priorityName
+            priority: Notepad.getPriorityName(PRIORITY_TYPES.LOW) //priorityName
         })
     }).join('');
     listRef.innerHTML = '';

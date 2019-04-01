@@ -23,7 +23,7 @@ export default class Notepad {
                     id: shortid.generate(),
                     title: text1,
                     body: text2,
-                    priority: PRIORITY_TYPES.LOW,
+                    priority: Notepad.getPriorityName(PRIORITY_TYPES.LOW),
                 };
                 this._notes.push(newItem);
                 localStorage.setItem('notes', JSON.stringify(this.notes));
