@@ -1,0 +1,81 @@
+.profile {
+  width: 428px;
+  height: 504px;
+  margin-bottom: 100px;
+  background-color: #e7ecf2;
+}
+
+.description {
+  position: relative;
+  width: 250px;
+  height: 255px;
+  top: 90px;
+  left: 90px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(191, 205, 222, 0.75);
+}
+
+.avatar {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.name {
+  font-size: 18px;
+  font-family: 'Lato';
+  color: rgb(18, 34, 54);
+  font-weight: bold;
+  text-align: center;
+}
+
+.tag {
+  font-size: 14px;
+  font-family: 'Lato';
+  color: rgb(118, 134, 150);
+  text-align: center;
+}
+
+.location {
+  font-size: 14px;
+  font-family: 'Lato';
+  color: rgb(118, 134, 150);
+  text-align: center;
+}
+
+.stats {
+  position: absolute;
+  display: flex;
+  top: 341px;
+  left: 57px;
+  border-radius: 2px;
+  height: 80px;
+  list-style-type: none;
+  font-size: 12px;
+  font-family: 'Lato';
+  color: rgb(118, 134, 150);
+  line-height: 2.667;
+}
+
+.item {
+  width: 82px;
+  height: 75px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(228, 233, 240);
+  background-color: rgb(243, 246, 249);
+  flex-direction: column;
+}
+
+.label {
+  color: rgb(118, 134, 150);
+  line-height: 2.667;
+}
+
+.quantity {
+  font-size: 14px;
+  color: rgb(31, 51, 73);
+  line-height: 2.286;
+  font-weight: bold;
+}
