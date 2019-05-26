@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/goit-fe-course/static/css/main.194dd4d6.chunk.css",
+    "main.js": "/goit-fe-course/static/js/main.b6ee9382.chunk.js",
+    "main.js.map": "/goit-fe-course/static/js/main.b6ee9382.chunk.js.map",
+    "runtime~main.js": "/goit-fe-course/static/js/runtime~main.e6ce5aa7.js",
+    "runtime~main.js.map": "/goit-fe-course/static/js/runtime~main.e6ce5aa7.js.map",
+    "static/js/2.b100127d.chunk.js": "/goit-fe-course/static/js/2.b100127d.chunk.js",
+    "static/js/2.b100127d.chunk.js.map": "/goit-fe-course/static/js/2.b100127d.chunk.js.map",
+    "index.html": "/goit-fe-course/index.html",
+    "precache-manifest.83204588f50c31aefc35f68464b0a181.js": "/goit-fe-course/precache-manifest.83204588f50c31aefc35f68464b0a181.js",
+    "service-worker.js": "/goit-fe-course/service-worker.js",
+    "static/css/main.194dd4d6.chunk.css.map": "/goit-fe-course/static/css/main.194dd4d6.chunk.css.map"
+  }
+}
